@@ -1,0 +1,193 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lexend Deca', Arial, sans-serif;
+}
+
+.container {
+    width: 1140px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    width: 500px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input {
+    width: 80%;
+    margin: 15px;
+    padding: 10px 20px;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.login-btn {
+    width: 120px;
+    text-align: center;
+    color: #405DE6;
+    font-size: 15px;
+    background-color: transparent;
+    border: 2px solid #405DE6;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn {
+    width: 120px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    background-color: #405DE6;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.choose {
+    display: none;
+}
+
+label {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    color: white;
+    background-color: #405DE6;
+    border-radius: 5px;
+    padding: 8px 15px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.material-icons {
+    margin-bottom: 4px;
+}
+
+.header-box {
+    height: 120px;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+}
+
+.posts {
+    width: 500px;
+    margin-top: 125px;   
+}
+
+.posts-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px;
+}
+
+.post-item {
+    border: 1px solid rgb(167, 164, 164);
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-avatar {
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.post-username {
+    font-weight: bold;
+}
+
+.post-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post-input {
+    width: 73%;
+    margin-right: 0;
+    padding: 12px 20px;
+}
+
+.post-img {
+    width: 50px;
+    margin: 0;
+}
+
+.send-btn {
+    width: 50px;
+    border: none;
+}
+
+.user-box {
+    display: flex;
+    width: 600px;
+    align-items: center;
+    position: fixed;
+    padding: 25px;
+    background-color: white;
+}
+
+.profile-avatar {
+    border-radius: 100%;
+    margin-right: 30px;
+}
+
+.name-box {
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    font-size: 24px;
+    margin: 0;
+    margin-right: 15px;
+}
+
+.username {
+    font-size: 15px;
+    color: gray;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.profil-buttons {
+    width: 400px;
+    justify-content: space-between;
+}
+
+.profil-btn {
+    width: 120px;
+}
+
+.profil-box {
+    margin-top: 200px;
+}

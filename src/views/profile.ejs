@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="user-box">
+            <img class="profile-avatar" width="130" src= <%= "http://localhost:4500/user/" + foundUser.avatarName %>>
+            <div class="info-box">
+                <div class="name-box">
+                    <p class="name"><%= foundUser.fname %> </p>
+                    <p class="name"><%= foundUser.lname %> </p>
+                </div>
+
+                <p class="username"><%= foundUser.username %> </p>
+
+                <div class="buttons profil-buttons">
+                    <a class="btn profil-btn" href="/dashboard">Make post</a>
+                    <a class="btn profil-btn" href="/">Go home</a>
+                    <a class="btn profil-btn" href="/logout">Log out</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="posts profil-box">
+            <ul class="posts-list">
+                <% userPosts.forEach(p => { %>
+                    <% if(p.posterName) { %>
+                        <li class="post-item">
+                            <p class="post-username"><%= p.username %></p>
+                            <img width="450" src= <%= "http://localhost:4500/images/" + p.posterName %>>
+                            <p><%= p.content %></p>
+                        </li>
+                    <% } else { %>
+                        <li class="post-item">
+                            <p class="post-username"><%= p.username %></p>
+                            <p><%= p.content %></p>
+                        </li>
+                    <% } %>
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

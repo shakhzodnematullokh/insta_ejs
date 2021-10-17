@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header-box">
+            <h1>Welcome, imagine it as Instagram.</h1>
+            <div class="buttons">
+                <a class="btn" href="/dashboard">Make post</a>
+                <a class="btn" href="/profile">Profile</a>
+            </div>
+        </div>
+    
+        <div class="posts">
+            <ul class="posts-list">
+                <% oldPosts.forEach(p => { %>
+                    <% if(p.posterName) { %>
+                        <li class="post-item">
+                            <div class="post-header">
+                                <img class="post-avatar" width="60" src= <%= "http://localhost:4500/user/" + p.avatarName %>>
+
+                                <p class="post-username"><%= p.username %></p>
+                            </div>
+                            <img width="450" src= <%= "http://localhost:4500/images/" + p.posterName %>>
+                            <p><%= p.content %></p>
+                        </li>
+                    <% } else { %>
+                        <li class="post-item">
+                            <div class="post-header">
+                                <img class="post-avatar" width="60" src= <%= "http://localhost:4500/user/" + p.avatarName %>>
+                                <p class="post-username"><%= p.username %></p>
+                            </div>
+                            <p><%= p.content %></p>
+                        </li>
+                    <% } %>
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
